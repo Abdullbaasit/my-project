@@ -7,7 +7,7 @@ import { useCart } from "../context/CartContext";
 const FeMale = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const { addToCart } = useCart();
+  const { addToCart } = useCart(false)
 
   useEffect(() => {
     axios
