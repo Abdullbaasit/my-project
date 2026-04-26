@@ -21,17 +21,17 @@ import Image from 'next/image'
    return (
       <div className="min-h-screen bg-gray-100 px-4 py-6">
         
-        {/* Title */}
+        
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-6">
           Nike
         </h1>
   
-        {/* Loading */}
+        
         {loading ? (
           <p className="text-center text-lg">Loading products...</p>
         ) : (
           
-          /* Grid Layout */
+          
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             
             {products.map((product) => (
@@ -68,7 +68,7 @@ import Image from 'next/image'
                     -{product.discountPercentage}%
                   </span>
                 </div>
-                
+
                 <button className="mt-3 w-full bg-black text-white py-2 rounded-lg hover:bg-gray-800">
                   Add to Cart
                 </button>
