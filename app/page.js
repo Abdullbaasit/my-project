@@ -1,13 +1,12 @@
+"use client";
 import { ParentDesign } from "./component/sneaker/TextFile";
-import { Cardlist } from "./component/sneaker/ImageFile";
-import { FetchData } from "./male/page";
+import { ImageSlider } from "./component/sneaker/button";
 
 export default function Home() {
   return (
-    <div className="max-w-6xl mx-auto px-8 py-16 grid grid-cols-1 sm:grid-cols-2 gap-10 items-center w-full">
-      <Cardlist />
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 py-10 grid md:grid-cols-2 gap-10 items-center">
+      <ImageSlider />
       <ParentDesign />
-      {/* <FetchData /> */}
-    </div>
+    </main>
   );
 }

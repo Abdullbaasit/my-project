@@ -2,13 +2,12 @@
 import { useState } from "react";
 import { ShoppingCart, Minus, Plus } from "lucide-react";
 
-export const ParentDesign = () => {
+export const ParentDesign = ({ onAddToCart }) => {
   const [count, setCount] = useState(1);
-  const [cart, setCart] = useState(0);
   const [added, setAdded] = useState(false);
 
   const handleAddToCart = () => {
-    setCart((prev) => prev + count);
+    onAddToCart(count); 
     setAdded(true);
     setTimeout(() => setAdded(false), 1500);
   };
@@ -68,25 +67,18 @@ export const ParentDesign = () => {
           </button>
         </div>
 
-        
         <button
           onClick={handleAddToCart}
           className={`flex-1 flex items-center justify-center gap-2.5 py-3 px-6 rounded-2xl font-semibold text-sm transition-all duration-200 shadow-md shadow-orange-200 active:scale-95 ${
             added
               ? "bg-green-500 shadow-green-200 text-white"
-              : "bg-orange-500 hover:bg-orange-500 text-white"
+              : "bg-orange-500 hover:bg-orange-600 text-white"
           }`}
         >
           <ShoppingCart size={18} />
           {added ? "Added to cart!" : "Add to Cart"}
         </button>
       </div>
-
-      {cart > 0 && (
-        <p className="text-sm text-gray-400">
-          {cart} item{cart !== 1 ? "s" : ""} in cart
-        </p>
-      )}
     </div>
   );
 };

@@ -28,7 +28,7 @@ export function ImageSlider() {
 
   return (
     <div className="flex flex-col gap-4 w-full max-w-xl mx-auto select-none">
-      {/* Main image */}
+      
       <div className="relative w-full overflow-hidden rounded-2xl aspect-square bg-gray-100 shadow-md">
         <div
           className="flex h-full transition-transform duration-500 ease-in-out"
